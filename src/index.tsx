@@ -3,13 +3,19 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Models from './app/models';
+import {Provider} from "mobx-react";
+
+const models = new Models();
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider {...models.getStores()}>
+      <App/>
+    </Provider>
   </React.StrictMode>
 );
 

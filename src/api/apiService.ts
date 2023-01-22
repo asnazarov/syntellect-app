@@ -13,14 +13,14 @@ export function getCountryByName(countryName: string): Promise<CountryInfo[]> {
     if (typeof countryName !== "string" || !countryName) {
       return [];
     }
-
     const searchText = countryName.toLocaleLowerCase();
 
-    return countries.filter(
+    const abc = countries.filter(
       (x) =>
         x.name.toLocaleLowerCase().startsWith(searchText) ||
         x.fullName.toLocaleLowerCase().startsWith(searchText)
     );
+    return abc
   });
 }
 

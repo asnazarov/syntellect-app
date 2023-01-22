@@ -1,0 +1,30 @@
+
+
+.button {
+  padding: 16px 64px;
+  border: 1px solid #2FAFFF;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+
+  &_dark {
+    background: #2FAFFF;
+  }
+
+  &_light {
+    background: #fff;
+    color: #2FAFFF;
+  }
+
+  &:disabled {
+    background: transparent;
+    color: #2FAFFF;
+    cursor: default;
+  }
+
+}

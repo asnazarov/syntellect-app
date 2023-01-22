@@ -1,8 +1,15 @@
 import React from "react";
-import "./App.css";
+import styles from "./App.module.scss";
+import {ButtonControls, AutocompleteControl} from "./app/providers";
 
-function App() {
-  return <div></div>;
+function App(props: any) {
+
+  return (
+    <main className={styles.container}>
+      <ButtonControls/>
+      <AutocompleteControl/>
+    </main>
+  )
 }
 
 export default App;
